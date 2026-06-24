@@ -22,6 +22,143 @@
 </head>
 <body>
 
+  <div class="container py-4">
+
+    <header class="text-center mb-5">
+      <h1 class="titulo-principal">Restaurante Fictirioc</h1>
+      <p>Menú y sistemas de reservass</p>
+    </header>
+
+    <!---Menú -->
+
+    <section class="mb-5">
+      <h2 class="mb-3"> Nuestro Menú</h2>
+      <div class="mb-4">
+        <button class="btn btn-warning filtro-activo"
+          onclick="filtrarCategoria('Todos')">
+          Todos
+        </button>
+
+        <button class="btn btn-outline-warning"
+          onclick="filtrarCategoria('Entrada')">
+          Entradas
+        </button>
+
+        <button class="btn btn-outline-warning"
+          onclick="filtrarCategoria('Plato Fuerte')">
+          Platos Fuertes
+        </button>
+
+        <button class="btn btn-outline-warning"
+        onclick="filtrarCategoria('Postre')">
+        Postres
+        </button>
+      </div>
+
+      <div id="contenedor-menu" class="row g-3"></div>
+    </section>
+
+    <!--Formulairo-->
+
+    <section class="mb-5">
+
+      <h2 class="mb-3">Reservar Mesaa</h2>
+
+      <form id="form-reserva">
+
+  <div class="row">
+
+    <!-- Nombre -->
+    <div class="col-md-6 mb-3">
+      <label>Nombre completo</label>
+      <input type="text" id="nombre" class="form-control">
+      <div id="error-nombre" class="error-campo"></div>
+    </div>
+
+    <!-- Correo -->
+    <div class="col-md-6 mb-3">
+      <label>Correo electrónico</label>
+      <input type="email" id="correo" class="form-control">
+      <div id="error-correo" class="error-campo"></div>
+    </div>
+
+    <!-- Fecha -->
+    <div class="col-md-4 mb-3">
+      <label>Fecha de reserva</label>
+      <input type="date" id="fecha" class="form-control">
+      <div id="error-fecha" class="error-campo"></div>
+    </div>
+
+    <!-- Hora -->
+    <div class="col-md-4 mb-3">
+      <label>Hora</label>
+      <select id="hora" class="form-select">
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+      </select>
+    </div>
+
+    <!-- Personas -->
+    <div class="col-md-4 mb-3">
+      <label>Número de personas</label>
+      <input type="number" id="personas" class="form-control">
+      <div id="error-personas" class="error-campo"></div>
+    </div>
+
+    <!-- Comentarios -->
+    <div class="col-12 mb-3">
+      <label>Comentarios</label>
+      <textarea id="comentarios" class="form-control" rows="3"></textarea>
+    </div>
+
+    <!-- Botón -->
+    <div class="col-12">
+      <button type="submit" id="btn-reservar" class="btn btn-success" disabled>
+        Registrar Reserva
+      </button>
+    </div>
+
+  </div>
+
+</form>
+
+    </section>
+
+    <!--TABla-->
+
+    <section>
+      <h2 class="mb-3">Reservas Registradas</h2>
+
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Personas</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-reservas"></tbody>
+          
+        </table>
+
+      </div>
+
+      <div 
+      id="resumen"
+      class="resumen-reservas">
+      </div>
+    </section>
+
+  </div>  
+
   <script src="js/app.js"></script>
 
 </body>

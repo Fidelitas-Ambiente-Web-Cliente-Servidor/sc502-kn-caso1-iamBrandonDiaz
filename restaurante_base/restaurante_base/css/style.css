@@ -26,3 +26,49 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
+
+.titulo-principal {
+font-family: var(--fuente-titulo);
+color:var(--color-primario)
+}
+
+.card-plato {
+  background:white ;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  border-left: 5px solid var(--color-secundario);
+}
+
+.card-plato h3 {
+  color: var(--color-primario);
+}
+
+.error-campo {
+  color:red;
+  font-size: .85rem;
+  margin-top: 5px;
+}
+
+.fila-reserva {
+  transition: .3s;
+}
+
+.reserva-vip {
+  background-color: var(--color-reserva-vip) !important;
+}
+
+.resumen-reservas {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--color-secundario);
+}
+
+.filtro-activo{
+  background-color: var(--color-secundario);
+  color: white;
+}
+
